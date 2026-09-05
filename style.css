@@ -1,0 +1,956 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    color: #eeeeee;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    line-height: 1.5;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background: rgba(8, 8, 8, 0.92);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid #202020;
+}
+
+.nav-container {
+    max-width: 1180px;
+    height: 62px;
+
+    margin: auto;
+    padding: 0 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+
+.logo span,
+.hero h1 span {
+    color: #8cff00;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #777;
+    font-size: 12px;
+
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+.contact-button {
+    border: 1px solid #333;
+
+    padding: 7px 13px;
+
+    font-size: 11px;
+
+    transition: 0.2s;
+}
+
+.contact-button:hover {
+    border-color: #8cff00;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    max-width: 1180px;
+    min-height: 620px;
+
+    margin: auto;
+    padding: 85px 22px;
+
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.status {
+    color: #777;
+
+    font-family: monospace;
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 25px;
+}
+
+.status-dot {
+    display: inline-block;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #8cff00;
+
+    margin-right: 8px;
+}
+
+.hero h1 {
+    font-size: clamp(60px, 8vw, 100px);
+
+    line-height: 0.88;
+
+    letter-spacing: -6px;
+
+    margin-bottom: 22px;
+}
+
+.hero h2 {
+    font-size: 18px;
+
+    color: #aaa;
+
+    font-weight: 500;
+}
+
+.hero-description {
+    max-width: 570px;
+
+    color: #777;
+
+    font-size: 16px;
+
+    margin-top: 18px;
+}
+
+.hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-top: 25px;
+}
+
+
+/* =========================
+   TAGS
+========================= */
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 6px;
+
+    margin-top: 18px;
+}
+
+.tags span,
+.hero-tags span {
+    border: 1px solid #292929;
+
+    color: #777;
+
+    padding: 4px 8px;
+
+    font-size: 10px;
+
+    font-family: monospace;
+}
+
+
+/* =========================
+   TERMINAL
+========================= */
+
+.terminal {
+    border: 1px solid #252525;
+
+    background: #0d0d0d;
+}
+
+.terminal-bar {
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    padding-left: 12px;
+
+    border-bottom: 1px solid #252525;
+}
+
+.terminal-bar span {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #444;
+}
+
+.terminal-content {
+    padding: 24px;
+
+    font-family: monospace;
+
+    font-size: 11px;
+}
+
+.terminal-content p {
+    margin-bottom: 11px;
+}
+
+.terminal-content b {
+    color: #8cff00;
+}
+
+.terminal-value {
+    color: #888;
+
+    padding-left: 14px;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    max-width: 1180px;
+
+    margin: auto;
+
+    padding: 65px 22px;
+
+    display: grid;
+
+    grid-template-columns: 150px 1fr;
+
+    gap: 45px;
+
+    border-top: 1px solid #202020;
+}
+
+.section-label {
+    color: #555;
+
+    font-family: monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+}
+
+.section-body {
+    min-width: 0;
+}
+
+.section h2 {
+    font-size: clamp(30px, 4vw, 48px);
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 18px;
+}
+
+.section-body > p {
+    color: #777;
+
+    max-width: 650px;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 0.7fr;
+
+    gap: 70px;
+}
+
+.about-grid p {
+    color: #888;
+
+    font-size: 14px;
+
+    max-width: 600px;
+
+    margin-bottom: 15px;
+}
+
+.quick-facts {
+    border-top: 1px solid #292929;
+}
+
+.quick-facts div {
+    padding: 12px 0;
+
+    border-bottom: 1px solid #292929;
+}
+
+.quick-facts span {
+    display: block;
+
+    color: #555;
+
+    font-family: monospace;
+
+    font-size: 9px;
+
+    margin-bottom: 3px;
+}
+
+.quick-facts strong {
+    font-size: 13px;
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.experience {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    border-top: 1px solid #292929;
+
+    padding-top: 20px;
+}
+
+.experience-main h2 {
+    font-size: 27px;
+
+    margin-bottom: 3px;
+}
+
+.experience-main h3 {
+    color: #888;
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    margin-bottom: 16px;
+}
+
+.experience-main p {
+    color: #777;
+
+    max-width: 700px;
+
+    font-size: 13px;
+}
+
+.experience-date {
+    color: #555;
+
+    font-family: monospace;
+
+    font-size: 10px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   PATENTS
+========================= */
+
+.patent-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+}
+
+.patent-heading p {
+    color: #777;
+
+    font-size: 13px;
+}
+
+.patent-total {
+    text-align: right;
+}
+
+.patent-total strong {
+    display: block;
+
+    font-size: 42px;
+
+    line-height: 1;
+}
+
+.patent-total span {
+    color: #555;
+
+    font-family: monospace;
+
+    font-size: 9px;
+}
+
+.patent-summary {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    border: 1px solid #292929;
+
+    margin: 30px 0 10px;
+}
+
+.patent-summary div {
+    padding: 14px 17px;
+
+    border-right: 1px solid #292929;
+}
+
+.patent-summary div:last-child {
+    border-right: none;
+}
+
+.patent-summary strong {
+    display: block;
+
+    font-size: 24px;
+}
+
+.patent-summary span {
+    color: #555;
+
+    font-family: monospace;
+
+    font-size: 9px;
+}
+
+.patent-list {
+    display: grid;
+
+    gap: 1px;
+
+    background: #292929;
+
+    border: 1px solid #292929;
+}
+
+.patent {
+    background: #0b0b0b;
+
+    padding: 17px;
+
+    display: grid;
+
+    grid-template-columns: 90px 1fr auto;
+
+    gap: 20px;
+
+    align-items: center;
+}
+
+.patent-status {
+    font-family: monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+}
+
+.patent-status.granted {
+    color: #8cff00;
+}
+
+.patent-status.published {
+    color: #ddd;
+}
+
+.patent-status.filed {
+    color: #666;
+}
+
+.patent-details h3 {
+    font-size: 14px;
+
+    margin-bottom: 2px;
+}
+
+.patent-details p {
+    color: #666;
+
+    font-size: 11px;
+}
+
+.patent-meta {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 5px;
+}
+
+.patent-meta span {
+    color: #444;
+
+    font-family: monospace;
+
+    font-size: 9px;
+}
+
+.patent > a {
+    color: #8cff00;
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.project-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 10px;
+}
+
+.project {
+    min-height: 270px;
+
+    padding: 22px;
+
+    border: 1px solid #292929;
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition: 0.2s;
+}
+
+.project:hover {
+    border-color: #555;
+}
+
+.project-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #555;
+
+    font-family: monospace;
+
+    font-size: 9px;
+
+    margin-bottom: 45px;
+}
+
+.project h3 {
+    font-size: 19px;
+
+    margin-bottom: 8px;
+}
+
+.project p {
+    color: #777;
+
+    font-size: 12px;
+}
+
+.project a {
+    margin-top: auto;
+
+    color: #8cff00;
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   RESEARCH
+========================= */
+
+.research-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    margin-top: 35px;
+}
+
+.research-grid div {
+    padding: 18px 0;
+
+    border-top: 1px solid #292929;
+}
+
+.research-grid span {
+    color: #555;
+
+    font-family: monospace;
+
+    font-size: 9px;
+}
+
+.research-grid h3 {
+    font-size: 16px;
+
+    margin-top: 3px;
+}
+
+
+/* =========================
+   PAPER OF WEEK
+========================= */
+
+.paper-week {
+    background: #0a0a0a;
+}
+
+.featured-paper {
+    border: 1px solid #303030;
+
+    padding: 28px;
+}
+
+.featured-paper-label {
+    color: #8cff00;
+
+    font-family: monospace;
+
+    font-size: 10px;
+
+    margin-bottom: 14px;
+}
+
+.featured-paper h2 {
+    margin-bottom: 7px;
+}
+
+.paper-author {
+    color: #555;
+
+    font-family: monospace;
+
+    font-size: 10px;
+
+    margin-bottom: 18px;
+}
+
+.featured-paper p {
+    color: #777;
+
+    max-width: 700px;
+
+    font-size: 13px;
+}
+
+.paper-buttons {
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 22px;
+}
+
+.button {
+    border: 1px solid #333;
+
+    padding: 8px 13px;
+
+    font-size: 10px;
+}
+
+.button.primary {
+    background: #8cff00;
+
+    color: #000;
+
+    border-color: #8cff00;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   PAPER LIBRARY
+========================= */
+
+.paper-controls {
+    display: flex;
+
+    gap: 7px;
+
+    margin: 30px 0 12px;
+}
+
+.paper-controls input,
+.paper-controls select {
+    background: #0d0d0d;
+
+    color: #ddd;
+
+    border: 1px solid #292929;
+
+    padding: 9px 11px;
+
+    font-family: inherit;
+
+    font-size: 11px;
+}
+
+.paper-controls input {
+    flex: 1;
+}
+
+#paperList {
+    display: grid;
+
+    gap: 1px;
+
+    background: #292929;
+
+    border: 1px solid #292929;
+}
+
+.paper-card {
+    background: #0b0b0b;
+
+    padding: 17px;
+}
+
+.paper-card h3 {
+    font-size: 14px;
+
+    margin: 8px 0 3px;
+}
+
+.paper-card p {
+    color: #666;
+
+    font-size: 11px;
+}
+
+.paper-card a {
+    display: inline-block;
+
+    color: #8cff00;
+
+    font-size: 10px;
+
+    margin-top: 10px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+    padding-bottom: 90px;
+}
+
+.contact-links {
+    display: flex;
+
+    gap: 25px;
+
+    margin-top: 25px;
+}
+
+.contact-links a {
+    color: #8cff00;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    max-width: 1180px;
+
+    margin: auto;
+
+    padding: 22px;
+
+    border-top: 1px solid #202020;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #444;
+
+    font-family: monospace;
+
+    font-size: 9px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+
+        padding-top: 65px;
+
+        gap: 45px;
+    }
+
+    .hero h1 {
+        font-size: 65px;
+    }
+
+    .section {
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+
+        padding: 50px 22px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .patent {
+        grid-template-columns: 70px 1fr;
+    }
+
+    .patent > a {
+        display: none;
+    }
+
+    .experience {
+        flex-direction: column;
+    }
+
+    .experience-date {
+        order: -1;
+    }
+
+    .research-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .patent-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .patent-summary div {
+        border-right: none;
+
+        border-bottom: 1px solid #292929;
+    }
+
+    .patent-summary div:last-child {
+        border-bottom: none;
+    }
+
+    .patent-heading {
+        gap: 20px;
+    }
+
+    .paper-controls {
+        flex-direction: column;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+}
